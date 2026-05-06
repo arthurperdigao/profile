@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Perdigão | Software Engineer</title>
+    <meta name="description" content="Arthur Perdigão - Engineering fluid user experiences with a focus on scalability and performance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div id="app">
+        <header>
+            <nav>
+                <div class="logo">AP. <img src="iconeBrasil.jpg" alt="Brasil" class="flag-img"></div>
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#projects" data-i18n="nav_projects">Projetos</a></li>
+                    <li><a href="#stack" data-i18n="nav_stack">Stack</a></li>
+                </ul>
+                <div class="lang-selector">
+                    <button id="lang-btn" class="pill-btn">
+                        <span id="current-flag">🇧🇷</span>
+                        <span id="current-lang">PT</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <div class="lang-option" data-lang="pt">
+                            <span>🇧🇷</span> Português
+                        </div>
+                        <div class="lang-option" data-lang="en">
+                            <span>🇺🇸</span> English
+                        </div>
+                    </div>
+                </div>
+                <button id="xray-toggle" class="magnetic" title="X-Ray Mode">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h1 class="glitch-text scramble" data-text="Arthur Perdigão">Arthur Perdigão</h1>
+                    <p class="subtitle" data-i18n="hero_subtitle">Desenvolvedor focado em performance e interfaces modernas.</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="primary-btn magnetic" data-i18n="cta_projects">Ver Projetos</a>
+                        <a href="#contact" class="secondary-btn magnetic" data-i18n="cta_contact">Contato</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="editorial-frame">
+                        <div class="bg-text">ARTHUR</div>
+                        <div class="photo-wrapper">
+                            <img src="1774290668490-removebg-preview.png" alt="Arthur Perdigão" class="profile-photo-editorial">
+                        </div>
+                        <div class="editorial-accent"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section reveal">
+                <h2 class="section-title" data-i18n="projects_title">Projetos em Destaque</h2>
+                <div class="projects-grid">
+                    <!-- FLAGSHIP PROJECT: BENDER -->
+                    <div class="project-card glass flagship" data-project="bender">
+                        <div class="project-img-placeholder">
+                             <img src="C:\Users\Arthur Perdigao\.gemini\antigravity\brain\5b45f7dd-2018-45c1-bf35-ebbf39e52039\media__1778100841550.png" alt="Bender - Portal Avatar">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="project_flagship_title">Bender — Portal Avatar</h3>
+                            <p data-i18n="project_flagship_desc">O Cargo Chefe: Uma comunidade completa com interações sociais, banco de dados robusto, mini-games autorais e sistema de Bazaar (loja) integrado.</p>
+                            <div class="tags">
+                                <span>Vanilla JS</span>
+                                <span>Firebase</span>
+                                <span>Canvas API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass" data-project="apiflow">
+                        <div class="project-img-placeholder">
+                            <img src="C:\Users\Arthur Perdigao\.gemini\antigravity\brain\5b45f7dd-2018-45c1-bf35-ebbf39e52039\media__1778101776373.png" alt="APIFlowTester">
+                        </div>
+                        <div class="project-info">
+                            <h3>APIFlowTester</h3>
+                            <p data-i18n="apiflow_desc">Ferramenta visual de drag-and-drop para testes de integração de API.</p>
+                            <div class="tags">
+                                <span>React 18</span>
+                                <span>Tailwind</span>
+                                <span>Lucide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass" data-project="caravana">
+                        <div class="project-img-placeholder">
+                            <img src="C:\Users\Arthur Perdigao\Desktop\profileaps\tech stack\caravana_thumb.png" alt="Caravana da Vera" onerror="this.src='C:\\Users\\Arthur Perdigao\\.gemini\\antigravity\\brain\\5b45f7dd-2018-45c1-bf35-ebbf39e52039\\media__1778101892449.png'">
+                        </div>
+                        <div class="project-info">
+                            <h3>Caravana da Vera</h3>
+                            <p data-i18n="project2_desc">Sistema de reserva de viagens e galeria interativa.</p>
+                            <div class="tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass" data-project="arenafacil">
+                        <div class="project-img-placeholder">
+                            <img src="arena%20facil/hierarquia%20de%20acesso%20ao%20sistema.png" alt="Arena Fácil">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="arenafacil_title">Arena Fácil — SaaS</h3>
+                            <p data-i18n="arenafacil_desc">Reservas de quadras e controle de comandas em tempo real.</p>
+                            <div class="tags">
+                                <span>Real-time</span>
+                                <span>Dashboard</span>
+                                <span>BI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stack" class="section reveal">
+                <h2 class="section-title" data-i18n="stack_title">Tech Stack</h2>
+                
+                <div class="stack-container">
+                    <!-- Backend & Core -->
+                    <div class="stack-category">
+                        <h3 class="category-label">// BACKEND & CORE</h3>
+                        <div class="stack-grid">
+                            <div class="stack-card glass" title="TypeScript">
+                                <img src="tech%20stack/Typescript_logo_2020.svg.png" alt="TypeScript">
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="stack-card glass" title="Nest.js">
+                                <img src="tech%20stack/nest.js.jpg" alt="Nest.js">
+                                <span>Nest.js</span>
+                            </div>
+                            <div class="stack-card glass" title="Node.js">
+                                <img src="tech%20stack/Node.js_logo.svg.png" alt="Node.js">
+                                <span>Node.js</span>
+                            </div>
+                            <div class="stack-card glass" title="PHP">
+                                <img src="tech%20stack/php.png" alt="PHP">
+                                <span>PHP</span>
+                            </div>
+                            <div class="stack-card glass" title="Laravel">
+                                <img src="tech%20stack/Laravel.svg.png" alt="Laravel">
+                                <span>Laravel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend & Mobile -->
+                    <div class="stack-category">
+                        <h3 class="category-label">// FRONTEND</h3>
+                        <div class="stack-grid">
+                            <div class="stack-card glass" title="React Native">
+                                <img src="tech%20stack/react%20native.png" alt="React Native">
+                                <span>React Native</span>
+                            </div>
+                            <div class="stack-card glass" title="Tailwind CSS">
+                                <img src="tech%20stack/Tailwind%20logoo.jpg" alt="Tailwind">
+                                <span>Tailwind</span>
+                            </div>
+                            <div class="stack-card glass" title="Framer Motion">
+                                <img src="tech%20stack/Framer%20Motion.png" alt="Framer Motion">
+                                <span>Framer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database & Real-time -->
+                    <div class="stack-category">
+                        <h3 class="category-label">// DATABASE & REAL-TIME</h3>
+                        <div class="stack-grid">
+                            <div class="stack-card glass" title="PostgreSQL">
+                                <img src="tech%20stack/postgresql.jpg" alt="PostgreSQL">
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="stack-card glass" title="Redis">
+                                <img src="tech%20stack/redis.png" alt="Redis">
+                                <span>Redis</span>
+                            </div>
+                            <div class="stack-card glass" title="Firebase">
+                                <img src="tech%20stack/firebase%20logo.png" alt="Firebase">
+                                <span>Firebase</span>
+                            </div>
+                            <div class="stack-card glass" title="Supabase">
+                                <img src="tech%20stack/supabase%20logo.jpg" alt="Supabase">
+                                <span>Supabase</span>
+                            </div>
+                            <div class="stack-card glass" title="WebSockets">
+                                <img src="tech%20stack/WebSockets.png" alt="WebSockets">
+                                <span>WebSockets</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section reveal">
+                <div class="contact-container">
+                    <div class="contact-header">
+                        <span class="status-badge"><span class="dot"></span> Available for projects</span>
+                        <h2 class="big-cta">Ready to build the <br><span>Extraordinary?</span></h2>
+                    </div>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-card glass">
+                            <div class="card-icon"><i class="fab fa-fiverr"></i></div>
+                            <h3>Fiverr</h3>
+                            <p>Hire me for custom projects</p>
+                            <a href="https://www.fiverr.com/arthurperdigao" target="_blank" class="contact-link">Order a Gig →</a>
+                        </div>
+                        
+                        <div class="contact-card glass">
+                            <div class="card-icon"><i class="fab fa-linkedin"></i></div>
+                            <h3>LinkedIn</h3>
+                            <p>Connect professionally</p>
+                            <a href="https://www.linkedin.com/in/arthur-perdig%C3%A3o-596b98185/" target="_blank" class="contact-link">View profile →</a>
+                        </div>
+                        
+                        <div class="contact-card glass">
+                            <div class="card-icon"><i class="fab fa-github"></i></div>
+                            <h3>GitHub</h3>
+                            <p>Check my repositories</p>
+                            <a href="https://github.com/arthurperdigao" target="_blank" class="contact-link">Explore code →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="glass">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">AP. <img src="iconeBrasil.jpg" alt="Brasil" class="flag-img"></div>
+                    <p data-i18n="footer_rights">© 2026 Arthur Perdigão. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal">
+            <div class="modal-content glass">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-gallery">
+                        <button class="gallery-nav prev">&lt;</button>
+                        <img id="modal-img" src="" alt="Project Image">
+                        <button class="gallery-nav next">&gt;</button>
+                        <div id="modal-caption"></div>
+                    </div>
+                    <div class="modal-info">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-desc"></p>
+                        <a id="modal-link" href="#" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-block;">
+                            <span data-i18n="cta_visit">Visitar Projeto</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical HUD -->
+        <div id="tech-hud" class="glass">
+            <div class="hud-item">RES: <span id="hud-res">0x0</span></div>
+            <div class="hud-item">SCR: <span id="hud-scr">0%</span></div>
+            <div class="hud-item">FPS: <span id="hud-fps">60</span></div>
+            <div class="hud-item">LNG: <span id="hud-lng">PT</span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

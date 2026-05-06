@@ -1,0 +1,14 @@
+# Dependências
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Temporários do editor
+.vscode/
+.idea/
+*.swp
+
+# Arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
