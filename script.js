@@ -376,7 +376,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
     let particles = [];
-    const particleCount = 60;
+    const particleCount = 120; // Dobrando a quantidade
+    let mouse = { x: null, y: null, radius: 150 };
 
     function resize() {
         canvas.width = window.innerWidth;
@@ -395,6 +396,19 @@ document.addEventListener('DOMContentLoaded', () => {
             this.radius = Math.random() * 1.5;
         }
         update() {
+            // Reação ao Mouse (Fuga)
+            if (mouse.x != null) {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < mouse.radius) {
+                    let forceX = dx / dist;
+                    let forceY = dy / dist;
+                    this.x -= forceX * 2;
+                    this.y -= forceY * 2;
+                }
+            }
+
             this.x += this.vx;
             this.y += this.vy;
             if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
@@ -403,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
             ctx.fill();
         }
     }
@@ -422,8 +436,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < 150) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(0, 112, 243, ${1 - dist / 150})`;
-                    ctx.lineWidth = 0.5;
+                    ctx.strokeStyle = `rgba(0, 112, 243, ${(1 - dist / 150) * 0.8})`;
+                    ctx.lineWidth = 0.8;
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
                     ctx.stroke();
@@ -433,6 +447,16 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animateParticles);
     }
     animateParticles();
+
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
+
+    window.addEventListener('mouseout', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
 
     // Project Modal Logic
     const modal = document.getElementById('project-modal');
@@ -509,17 +533,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const mouseY = e.clientY;
         
         parallaxElements.forEach(el => {
-            const speed = el.getAttribute('data-speed') || 2;
-            const x = (window.innerWidth - mouseX * speed) / 100;
-            const y = (window.innerHeight - mouseY * speed) / 100;
+            const speed = el.getAttribute('data-speed') || 5; // Aumentando velocidade
+            const x = (window.innerWidth - mouseX * speed) / 80;
+            const y = (window.innerHeight - mouseY * speed) / 80;
             el.style.transform = `translateX(${x}px) translateY(${y}px)`;
         });
 
         abstractShapes.forEach((shape, index) => {
-            const speed = (index + 1) * 3;
-            const x = (window.innerWidth - mouseX * speed) / 150;
-            const y = (window.innerHeight - mouseY * speed) / 150;
-            shape.style.transform = `translateX(${x}px) translateY(${y}px) rotate(${mouseX / 10}deg)`;
+            const speed = (index + 1) * 5; // Movimento mais forte
+            const x = (window.innerWidth - mouseX * speed) / 100;
+            const y = (window.innerHeight - mouseY * speed) / 100;
+            shape.style.transform = `translateX(${x}px) translateY(${y}px) rotate(${mouseX / 5}deg)`;
         });
     });
 });
