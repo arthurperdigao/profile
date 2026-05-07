@@ -571,3 +571,29 @@ nav {
     text-align: center;
     font-size: 0.8rem;
 }
+
+
+.editorial-accent {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        bottom: 15%;
+        right: 0;
+        z-index: 6;
+        transition: var(--transition);
+}
+
+.editorial-frame:hover .bg-text {
+        -webkit-text-stroke: 1.5px var(--accent-color);
+        filter: drop-shadow(0 0 10px var(--accent-color)) drop-shadow(0 0 20px rgba(0, 112, 243, 0.3));
+        letter-spacing: 25px;
+        opacity: 0.9;
+}
+
+.editorial-frame:hover .editorial-accent {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 20px var(--accent-color), inset 0 0 10px var(--accent-color);
+        background: transparent;
+        transform: scale(1.1);
+}
