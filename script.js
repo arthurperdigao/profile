@@ -56,11 +56,11 @@ const translations = {
                 desc: "Sistema completo de reservas de quadras, controle de comandas em tempo real e BI.",
                 link: "#",
                 gallery: [
-                    { url: "assets/arena-facil/dash-board.png", caption: "Dashboard Principal: Visão geral em tempo real de faturamento e agendamentos." },
-                    { url: "assets/arena-facil/login.png", caption: "Controle de Acesso: Gestão de usuários, níveis de permissão e segurança." },
-                    { url: "assets/arena-facil/agendamento.png", caption: "Sistema de Agendamento: Interface interativa para reservas de espaços esportivos." },
-                    { url: "assets/arena-facil/comanda.png", caption: "Comandas em Tempo Real: Controle dinâmico de loja e consumo interno." },
-                    { url: "assets/arena-facil/relatorio.png", caption: "Business Intelligence: Relatórios financeiros detalhados e análise de métricas." }
+                    { url: "arena%20facil/dash%20board.png", caption: "Dashboard Principal: Visão geral em tempo real de faturamento e agendamentos." },
+                    { url: "arena%20facil/hierarquia%20de%20acesso%20ao%20sistema.png", caption: "Controle de Acesso: Gestão de usuários, níveis de permissão e segurança." },
+                    { url: "arena%20facil/agendamento%20de%20quadra.png", caption: "Sistema de Agendamento: Interface interativa para reservas de espaços esportivos." },
+                    { url: "arena%20facil/Sistema%20de%20controle%20de%20comanda.png", caption: "Comandas em Tempo Real: Controle dinâmico de loja e consumo interno." },
+                    { url: "arena%20facil/relatorio%20branco.png", caption: "Business Intelligence: Relatórios financeiros detalhados e análise de métricas." }
                 ]
             }
         }
@@ -93,10 +93,9 @@ const translations = {
                 desc: "A comprehensive community platform with shops, mini-games, and real-time social interactions.",
                 link: "https://bender-goll.vercel.app/",
                 gallery: [
-                    { url: "assets/bender/home.png", caption: "Home — Elemental Legacy" },
-                    { url: "assets/bender/scrolls.png", caption: "Scroll Library — Comic Reader System" },
-                    { url: "assets/bender/journey.png", caption: "Journey of Knowledge — Mini-games and Quizzes" },
-                    { url: "assets/bender/bazaar.png", caption: "Omashu Bazaar — Shop and Item System" }
+                    { url: "bender%20avatar/home%20principal.png", caption: "Home — Elemental Legacy" },
+                    { url: "bender%20avatar/biblioteca%20de%20livros.png", caption: "Scroll Library — Comic Reader System" },
+                    { url: "bender%20avatar/loja%20mundo%20avatar.png", caption: "Omashu Bazaar — Shop and Item System" }
                 ]
             },
             caravana: {
@@ -104,9 +103,9 @@ const translations = {
                 desc: "Complete travel booking system, destination management, and interactive moments gallery.",
                 link: "https://caravanadavera.com.br/",
                 gallery: [
-                    { url: "assets/caravana/home.png", caption: "Landing Page — Religious Journey" },
-                    { url: "assets/caravana/packages.png", caption: "Travel Packages — Available Destinations" },
-                    { url: "assets/caravana/gallery.png", caption: "Moments Gallery — Passenger Records" }
+                    { url: "caravana%20da%20vera/home%20principal.png", caption: "Landing Page — Religious Journey" },
+                    { url: "caravana%20da%20vera/pacotes%20de%20viagem.png", caption: "Travel Packages — Available Destinations" },
+                    { url: "caravana%20da%20vera/momentos%20da%20viagem.png", caption: "Moments Gallery — Passenger Records" }
                 ]
             },
             apiflow: {
@@ -114,7 +113,7 @@ const translations = {
                 desc: "Innovative visual tool designed to simplify complex integration tests through a drag-and-drop canvas.",
                 link: "https://github.com/arthurperdigao/APIFlowTester",
                 gallery: [
-                    { url: "assets/apiflow/canvas.png", caption: "Interactive Canvas and Execution Results" }
+                    { url: "apitesteflow/456168149-1108bcc0-35a7-438c-9d58-081b73e78ea0.png", caption: "Interactive Canvas and Execution Results" }
                 ]
             },
             arenafacil: {
@@ -122,11 +121,11 @@ const translations = {
                 desc: "Complete system for court reservations, real-time command control and business BI.",
                 link: "#",
                 gallery: [
-                    { url: "assets/arena-facil/dash-board.png", caption: "Main Dashboard: Real-time overview of business performance and active bookings." },
-                    { url: "assets/arena-facil/login.png", caption: "Access Control: Management of users, permissions and administrative security." },
-                    { url: "assets/arena-facil/agendamento.png", caption: "Scheduling System: Interactive calendar for sports facility management." },
-                    { url: "assets/arena-facil/comanda.png", caption: "Real-time Commands: Dynamic store and point-of-sale control for arenas." },
-                    { url: "assets/arena-facil/relatorio.png", caption: "Business Intelligence: Detailed financial reports and usage analytics." }
+                    { url: "arena%20facil/dash%20board.png", caption: "Main Dashboard: Real-time overview of business performance and active bookings." },
+                    { url: "arena%20facil/hierarquia%20de%20acesso%20ao%20sistema.png", caption: "Access Control: Management of users, permissions and administrative security." },
+                    { url: "arena%20facil/agendamento%20de%20quadra.png", caption: "Scheduling System: Interactive calendar for sports facility management." },
+                    { url: "arena%20facil/Sistema%20de%20controle%20de%20comanda.png", caption: "Real-time Commands: Dynamic store and point-of-sale control for arenas." },
+                    { url: "arena%20facil/relatorio%20branco.png", caption: "Business Intelligence: Detailed financial reports and usage analytics." }
                 ]
             }
         }
