@@ -254,25 +254,77 @@ nav {
 
 h1.glitch-text {
     font-family: var(--font-heading);
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Fonte fluida */
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #fff, #888);
+    background: linear-gradient(to right, #fff, #aaa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(0, 112, 243, 0.6));
+    white-space: nowrap; /* Evita quebra de linha no glitch */
 }
 
 .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.hero-bio {
+    font-size: 1.1rem;
     color: var(--secondary-color);
     margin-bottom: 2.5rem;
+    line-height: 1.8;
     font-weight: 300;
+    max-width: 550px;
 }
 
 .hero-cta {
     display: flex;
     gap: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.quick-stats {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    width: max-content;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 30px;
+    background: var(--glass-border);
 }
 
 .primary-btn, .secondary-btn {
@@ -306,11 +358,12 @@ h1.glitch-text {
 /* Visuals - Editorial Look */
 .hero-visual {
     position: relative;
-    width: 500px;
-    height: 600px;
+    width: 450px;
+    height: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--transition);
 }
 
 .editorial-frame {
@@ -324,30 +377,54 @@ h1.glitch-text {
 
 .bg-text {
     position: absolute;
-    font-family: var(--font-heading);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 10rem;
-    font-weight: 900;
+    font-weight: 800;
     color: transparent;
-    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.2);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
-    transform: rotate(-90deg);
-    letter-spacing: 10px;
+    transform: rotate(-90deg) translateX(-20px);
+    letter-spacing: 15px;
     pointer-events: none;
+    text-transform: uppercase;
+    white-space: nowrap; /* Previne quebras no hover */
 }
 
 .photo-wrapper {
     position: relative;
-    width: 350px;
-    height: 500px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+    width: 280px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);
-    border-radius: 20px;
+    border-radius: 24px;
     z-index: 5;
-    overflow: hidden; /* This creates the window effect */
+    overflow: hidden;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.modern-arc {
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+                linear-gradient(135deg, var(--accent-color), #fff, transparent) border-box;
+    z-index: 4;
+    opacity: 0.6;
+    mask: conic-gradient(from 0deg, #000 0deg, #000 240deg, transparent 240deg);
+    -webkit-mask: conic-gradient(from 0deg, #000 0deg, #000 240deg, transparent 240deg);
+    animation: rotate-arc 10s linear infinite;
+    filter: drop-shadow(0 0 15px var(--accent-color));
+}
+
+@keyframes rotate-arc {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .profile-photo-editorial {
@@ -361,12 +438,15 @@ h1.glitch-text {
 
 .editorial-accent {
     position: absolute;
-    width: 100px;
+    width: 60px;
     height: 2px;
     background: var(--accent-color);
-    bottom: 15%;
-    right: 0;
+    border: none;
+    bottom: 20%;
+    right: -20px;
     z-index: 6;
+    transition: var(--transition);
+    box-shadow: 0 0 15px var(--accent-color);
 }
 
 .editorial-frame:hover .profile-photo-editorial {
@@ -375,10 +455,17 @@ h1.glitch-text {
 }
 
 .editorial-frame:hover .bg-text {
-    -webkit-text-stroke: 2px var(--accent-color);
-    filter: drop-shadow(0 0 15px var(--accent-color));
-    letter-spacing: 20px;
-    opacity: 0.8;
+    -webkit-text-stroke: 1.5px var(--accent-color);
+    filter: drop-shadow(0 0 10px var(--accent-color)) drop-shadow(0 0 20px rgba(0, 112, 243, 0.3));
+    letter-spacing: 18px; /* Reduzido levemente para evitar extrapolar o container */
+    opacity: 0.9;
+}
+
+.editorial-frame:hover .editorial-accent {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-color), inset 0 0 10px var(--accent-color);
+    background: transparent;
+    transform: scale(1.1);
 }
 
 /* X-Ray Mode (Blueprint) */
@@ -656,11 +743,71 @@ body.xray-mode #tech-hud {
 
 /* Responsive */
 @media (max-width: 768px) {
+    #app { padding: 0 1.5rem; }
     .nav-links { display: none; }
-    h1.glitch-text { font-size: 3rem; }
-    .hero { flex-direction: column; text-align: center; justify-content: center; }
-    .hero-cta { justify-content: center; }
-    .hero-visual { display: none; }
+    
+    header { padding: 1rem 1.5rem; }
+    
+    .hero { 
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column-reverse; 
+        text-align: center; 
+        justify-content: center; 
+        padding: 100px 0 40px;
+    }
+    
+    .hero-content {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .hero-cta { 
+        justify-content: center; 
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .hero-visual { 
+        width: 100%;
+        height: 380px;
+        margin-bottom: 1rem;
+        transform: scale(0.9); /* Ajuste fino para mobile */
+    }
+    
+    .photo-wrapper {
+        width: 180px;
+        height: 250px;
+    }
+    
+    .modern-arc {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .bg-text {
+        font-size: 5rem;
+        letter-spacing: 8px;
+        transform: rotate(-90deg) translateX(0);
+    }
+    
+    .quick-stats {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1px 1fr;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .stat-item:last-child, 
+    .stat-divider:last-of-type {
+        display: none; /* Simplifica estatísticas no mobile */
+    }
+    
+    .section { padding: 4rem 0; }
+    .section-title { font-size: 2rem; margin-bottom: 3rem; }
+    
+    .projects-grid { grid-template-columns: 1fr; }
 }
 
 /* Modal Styles */
