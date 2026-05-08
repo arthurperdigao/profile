@@ -646,7 +646,6 @@ body.xray-mode .profile-photo-editorial {
     #app { padding: 0 1rem; }
     .nav-links { display: none; }
     .flag-img { display: none; } /* Remove redundância visual */
-    #bg-canvas { opacity: 0.25 !important; } /* Reduz a poluição das linhas no mobile */
     
     header { padding: 0.5rem 1rem; }
     nav { padding: 0.5rem 1rem; }
@@ -692,7 +691,11 @@ body.xray-mode .profile-photo-editorial {
     }
     
     .bg-text {
-        display: none; /* Remove a poluição visual no mobile */
+        display: block; /* Restaura o efeito neon Premium */
+        font-size: 3.5rem; /* Ajustado para encaixar perfeitamente sem vazar */
+        letter-spacing: 12px;
+        transform: rotate(-90deg) translateX(10px) translateY(10px);
+        opacity: 0.6;
     }
     
     .editorial-accent {
@@ -914,6 +917,36 @@ body.xray-mode .profile-photo-editorial {
     padding: 1rem;
     text-align: center;
     font-size: 0.8rem;
+}
+
+/* Correção Crítica da Cascata CSS: Overrides Mobile para elementos definidos no final do arquivo */
+@media (max-width: 768px) {
+    .modal {
+        padding: 1rem;
+        align-items: flex-start;
+    }
+    .modal-content {
+        padding: 3rem 1.5rem 1.5rem 1.5rem;
+        margin-top: 1rem;
+        border-radius: 20px;
+    }
+    .close-modal {
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 2.5rem;
+    }
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .modal-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .modal-info p {
+        font-size: 0.95rem;
+    }
 }
 
 

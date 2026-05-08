@@ -34,10 +34,9 @@ const translations = {
                 desc: "Uma comunidade completa com sistema de lojas, mini-games e interações sociais em tempo real.",
                 link: "https://bender-goll.vercel.app/",
                 gallery: [
-                    { url: "C:\\Users\\Arthur Perdigao\\.gemini\\antigravity\\brain\\5b45f7dd-2018-45c1-bf35-ebbf39e52039\\media__1778100841550.png", caption: "Home — Legado Elemental" },
-                    { url: "C:\\Users\\Arthur Perdigao\\.gemini\\antigravity\\brain\\5b45f7dd-2018-45c1-bf35-ebbf39e52039\\media__1778101088928.png", caption: "Biblioteca de Pergaminhos — Sistema de Leitura de HQs" },
-                    { url: "C:\\Users\\Arthur Perdigao\\.gemini\\antigravity\\brain\\5b45f7dd-2018-45c1-bf35-ebbf39e52039\\media__1778101130805.png", caption: "Jornada do Conhecimento — Mini-games e Quizzes" },
-                    { url: "C:\\Users\\Arthur Perdigao\\.gemini\\antigravity\\brain\\5b45f7dd-2018-45c1-bf35-ebbf39e52039\\media__1778101159649.png", caption: "Bazar de Omashu — Sistema de Loja e Itens" }
+                    { url: "bender%20avatar/home%20principal.png", caption: "Home — Legado Elemental" },
+                    { url: "bender%20avatar/biblioteca%20de%20livros.png", caption: "Biblioteca de Pergaminhos — Sistema de Leitura de HQs" },
+                    { url: "bender%20avatar/loja%20mundo%20avatar.png", caption: "Bazar de Omashu — Sistema de Loja e Itens" }
                 ]
             },
             caravana: {
@@ -45,9 +44,9 @@ const translations = {
                 desc: "Sistema completo de reservas de viagens, gestão de destinos e galeria de momentos interativa.",
                 link: "https://caravanadavera.com.br/",
                 gallery: [
-                    { url: "C:\\Users\\Arthur Perdigao\\.gemini\\antigravity\\brain\\5b45f7dd-2018-45c1-bf35-ebbf39e52039\\media__1778101892449.png", caption: "Landing Page — Jornada Religiosa" },
-                    { url: "C:\\Users\\Arthur Perdigao\\.gemini\\antigravity\\brain\\5b45f7dd-2018-45c1-bf35-ebbf39e52039\\media__1778101925090.png", caption: "Pacotes de Viagem — Destinos Disponíveis" },
-                    { url: "C:\\Users\\Arthur Perdigao\\.gemini\\antigravity\\brain\\5b45f7dd-2018-45c1-bf35-ebbf39e52039\\media__1778101946507.png", caption: "Galeria de Momentos — Registros dos Passageiros" }
+                    { url: "caravana%20da%20vera/home%20principal.png", caption: "Landing Page — Jornada Religiosa" },
+                    { url: "caravana%20da%20vera/pacotes%20de%20viagem.png", caption: "Pacotes de Viagem — Destinos Disponíveis" },
+                    { url: "caravana%20da%20vera/momentos%20da%20viagem.png", caption: "Galeria de Momentos — Registros dos Passageiros" }
                 ]
             },
             apiflow: {
@@ -55,7 +54,7 @@ const translations = {
                 desc: "Ferramenta visual inovadora para simplificar testes de integração complexos através de um canvas drag-and-drop.",
                 link: "https://github.com/arthurperdigao/APIFlowTester",
                 gallery: [
-                    { url: "C:\\Users\\Arthur Perdigao\\.gemini\\antigravity\\brain\\5b45f7dd-2018-45c1-bf35-ebbf39e52039\\media__1778101776373.png", caption: "Canvas Interativo e Resultados de Execução" }
+                    { url: "apitesteflow/456168149-1108bcc0-35a7-438c-9d58-081b73e78ea0.png", caption: "Canvas Interativo e Resultados de Execução" }
                 ]
             },
             arenafacil: {
