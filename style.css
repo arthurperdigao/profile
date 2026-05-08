@@ -766,11 +766,35 @@ body.xray-mode .profile-photo-editorial {
     
     .modal-body {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+    
+    .modal {
+        padding: 1rem;
+        align-items: flex-start; /* Alinha ao topo no mobile para garantir que o título seja lido */
     }
     
     .modal-content {
-        padding: 2rem;
+        padding: 3rem 1.5rem 1.5rem 1.5rem; /* Mais espaço no topo para o botão fechar */
+        margin-top: 1rem;
+        border-radius: 20px;
+    }
+    
+    .close-modal {
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 2.5rem;
+        color: var(--accent-color);
+        z-index: 10;
+    }
+    
+    .modal-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-info p {
+        font-size: 0.95rem;
     }
 }
 
@@ -831,6 +855,7 @@ body.xray-mode .profile-photo-editorial {
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    overflow-y: auto; /* Permite rolar se o conteúdo for maior que a tela */
 }
 
 .modal.active {
