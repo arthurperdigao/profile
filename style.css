@@ -641,10 +641,13 @@ body.xray-mode .profile-photo-editorial {
 
 /* Responsive */
 @media (max-width: 768px) {
-    #app { padding: 0 1.5rem; }
+    #app { padding: 0 1rem; }
     .nav-links { display: none; }
     
-    header { padding: 1rem 1.5rem; }
+    header { padding: 0.5rem 1rem; }
+    nav { padding: 0.5rem 1rem; }
+    
+    #tech-hud { display: none !important; } /* Esconde o HUD no celular */
     
     .hero { 
         display: flex; /* Restaura o flexbox para o mobile */
@@ -685,9 +688,7 @@ body.xray-mode .profile-photo-editorial {
     }
     
     .bg-text {
-        font-size: 4.5rem;
-        letter-spacing: 5px;
-        transform: rotate(-90deg) translateX(0);
+        display: none; /* Remove a poluição visual no mobile */
     }
     
     .editorial-accent {
@@ -711,7 +712,11 @@ body.xray-mode .profile-photo-editorial {
     .section { padding: 4rem 0; }
     .section-title { font-size: 2rem; margin-bottom: 3rem; }
     
-    .projects-grid { grid-template-columns: 1fr; }
+    .projects-grid { 
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
     
     .project-card.flagship {
         grid-template-columns: 1fr; /* Empilha no mobile */
