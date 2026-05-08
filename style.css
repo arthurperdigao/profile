@@ -433,6 +433,8 @@ body.xray-mode .profile-photo-editorial {
 
 .project-img-placeholder {
     height: 240px;
+    width: 100%;
+    flex-shrink: 0;
     background: #111;
     position: relative;
     overflow: hidden;
@@ -643,6 +645,8 @@ body.xray-mode .profile-photo-editorial {
 @media (max-width: 768px) {
     #app { padding: 0 1rem; }
     .nav-links { display: none; }
+    .flag-img { display: none; } /* Remove redundância visual */
+    #bg-canvas { opacity: 0.25 !important; } /* Reduz a poluição das linhas no mobile */
     
     header { padding: 0.5rem 1rem; }
     nav { padding: 0.5rem 1rem; }
@@ -726,7 +730,10 @@ body.xray-mode .profile-photo-editorial {
     
     .project-card.flagship .project-img-placeholder {
         height: 250px;
-        min-height: auto;
+        min-height: 250px;
+        flex-shrink: 0;
+        width: 100%;
+        display: block;
     }
     
     .project-card.flagship .project-info {
@@ -737,8 +744,14 @@ body.xray-mode .profile-photo-editorial {
         grid-template-columns: 1fr;
     }
     
+    .category-label {
+        text-align: center; /* Centraliza no mobile para não grudar na borda */
+        margin-bottom: 1.5rem;
+    }
+    
     .stack-grid {
         justify-content: center;
+        gap: 1rem; /* Reduz o gap para alinhar melhor os ícones menores */
     }
     
     .stack-card {
