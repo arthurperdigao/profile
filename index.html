@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Perdigão | Software Engineer</title>
-    <meta name="description" content="Arthur Perdigão - Engineering fluid user experiences with a focus on scalability and performance.">
+    <title>Arthur Perdigão | SDET & QA Architect</title>
+    <meta name="description" content="Arthur Perdigão - SDET & QA Architect | Automação E2E com Playwright & TypeScript, Validação de APIs, Esteiras CI/CD e Inovação com IA (LLM, RAG & Scraping).">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,59 +20,87 @@
             <nav>
                 <div class="logo">AP. <img src="iconeBrasil.jpg" alt="Brasil" class="flag-img"></div>
                 <ul class="nav-links">
-                    <li><a href="#home" data-i18n="nav_home">Home</a></li>
-                    <li><a href="#projects" data-i18n="nav_projects">Projetos</a></li>
-                    <li><a href="#stack" data-i18n="nav_stack">Stack</a></li>
+                    <li><a href="#home" data-i18n="nav_home">Início</a></li>
+                    <li><a href="#experience" data-i18n="nav_experience">Experiência</a></li>
+                    <li><a href="#projects" data-i18n="nav_projects">Cases & QA</a></li>
+                    <li><a href="#stack" data-i18n="nav_stack">Stack & Skills</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contato</a></li>
                 </ul>
-                <div class="lang-selector">
-                    <button id="lang-btn" class="pill-btn">
-                        <span id="current-flag">🇧🇷</span>
-                        <span id="current-lang">PT</span>
-                    </button>
-                    <div class="lang-dropdown">
-                        <div class="lang-option" data-lang="pt">
-                            <span>🇧🇷</span> Português
-                        </div>
-                        <div class="lang-option" data-lang="en">
-                            <span>🇺🇸</span> English
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                    <a href="Arthur_Perdigao_CV.pdf" download="Arthur_Perdigao_CV.pdf" class="nav-cv-btn magnetic" target="_blank" title="Baixar Currículo">
+                        <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="nav_cv">Currículo PDF</span>
+                    </a>
+                    <div class="lang-selector">
+                        <button id="lang-btn" class="pill-btn">
+                            <span id="current-flag">🇧🇷</span>
+                            <span id="current-lang">PT</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <div class="lang-option" data-lang="pt">
+                                <span>🇧🇷</span> Português
+                            </div>
+                            <div class="lang-option" data-lang="en">
+                                <span>🇺🇸</span> English
+                            </div>
                         </div>
                     </div>
+                    <button id="xray-toggle" class="magnetic" title="X-Ray Mode">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                    </button>
                 </div>
-                <button id="xray-toggle" class="magnetic" title="X-Ray Mode">
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
-                </button>
             </nav>
         </header>
 
         <main>
+            <!-- HERO SECTION -->
             <section id="home" class="hero">
                 <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span data-i18n="hero_badge">Disponível para Oportunidades • SDET & QA Architect</span>
+                    </div>
+
                     <h1 class="glitch-text scramble" data-text="Arthur Perdigão">Arthur Perdigão</h1>
-                    <p class="subtitle" data-i18n="hero_subtitle">Engenharia Full-stack de alto nível para projetos que exigem performance extrema e design de classe mundial.</p>
-                    <p class="hero-bio" data-i18n="hero_bio">Com 7 anos de atuação no mercado, especializo-me em transformar visões complexas em sistemas digitais de alto impacto.</p>
+                    
+                    <p class="subtitle" data-i18n="hero_subtitle">Engenharia de Qualidade de Software de alto nível unindo automação resiliente com Playwright & TypeScript, validação de APIs críticas e integração de Inteligência Artificial generativa.</p>
+                    
+                    <p class="hero-bio" data-i18n="hero_bio">Atuando desde 2018 com foco em automação de testes e qualidade de ponta a ponta. Experiência sólida em fintechs (crédito consignado) e travel techs, liderança técnica, ambientes Staging/UAT e arquitetura RAG para aceleração de suporte e esteiras de engenharia.</p>
                     
                     <div class="hero-cta">
-                        <a href="#projects" class="primary-btn magnetic" data-i18n="cta_projects">Ver Projetos</a>
-                        <a href="#contact" class="secondary-btn magnetic" data-i18n="cta_contact">Contato</a>
+                        <a href="#experience" class="primary-btn magnetic">
+                            <i class="fa-solid fa-briefcase"></i> <span data-i18n="cta_experience">Trajetória Corporativa</span>
+                        </a>
+                        <a href="Arthur_Perdigao_CV.pdf" download="Arthur_Perdigao_CV.pdf" class="secondary-btn magnetic" target="_blank">
+                            <i class="fa-solid fa-file-pdf"></i> <span data-i18n="cta_download_cv">Baixar Currículo (PDF)</span>
+                        </a>
+                        <a href="#contact" class="secondary-btn magnetic">
+                            <i class="fa-solid fa-paper-plane"></i> <span data-i18n="cta_contact">Falar Comigo</span>
+                        </a>
                     </div>
 
                     <div class="quick-stats">
                         <div class="stat-item">
-                            <span class="stat-value" data-i18n="stat_years">7+ ANOS</span>
-                            <span class="stat-label" data-i18n="stat_years_label">Experiência</span>
+                            <span class="stat-value" data-i18n="stat_years">8+ ANOS</span>
+                            <span class="stat-label" data-i18n="stat_years_label">Experiência em QA</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-value" data-i18n="stat_stack">FULL-STACK</span>
-                            <span class="stat-label" data-i18n="stat_stack_label">Especialista</span>
+                            <span class="stat-value" data-i18n="stat_e2e">100+ E2E</span>
+                            <span class="stat-label" data-i18n="stat_e2e_label">Cenários Playwright</span>
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <span class="stat-value" data-i18n="stat_quality">SÊNIOR</span>
-                            <span class="stat-label" data-i18n="stat_quality_label">Qualidade</span>
+                            <span class="stat-value" data-i18n="stat_ai">LLM & RAG</span>
+                            <span class="stat-label" data-i18n="stat_ai_label">Inovação & Scraping</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-value" data-i18n="stat_domains">FINTECH & TRAVEL</span>
+                            <span class="stat-label" data-i18n="stat_domains_label">Verticais Críticas</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="hero-visual">
                     <div class="editorial-frame">
                         <div class="bg-text">ARTHUR</div>
@@ -84,126 +113,360 @@
                 </div>
             </section>
 
-            <section id="projects" class="section reveal">
-                <h2 class="section-title" data-i18n="projects_title">Projetos em Destaque</h2>
-                <div class="projects-grid">
-                    <!-- FLAGSHIP PROJECT: BENDER -->
-                    <div class="project-card glass flagship" data-project="bender">
-                        <div class="project-img-placeholder">
-                             <img src="bender%20avatar/home%20principal.png" alt="Bender - Portal Avatar">
-                        </div>
-                        <div class="project-info">
-                            <h3 data-i18n="project_flagship_title">Bender — Portal Avatar</h3>
-                            <p data-i18n="project_flagship_desc">O Cargo Chefe: Uma comunidade completa com interações sociais, banco de dados robusto, mini-games autorais e sistema de Bazaar (loja) integrado.</p>
-                            <div class="tags">
-                                <span>Vanilla JS</span>
-                                <span>Firebase</span>
-                                <span>Canvas API</span>
+            <!-- EXPERIENCE SECTION -->
+            <section id="experience" class="section reveal">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="exp_title">Trajetória & Experiência</h2>
+                    <p class="section-subtitle" data-i18n="exp_subtitle">Histórico de liderança, engenharia de qualidade e inovação tecnológica em produtos de grande escala.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- 1. PAYTRACK -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div class="timeline-company-wrap">
+                                    <h3 class="timeline-company">Paytrack</h3>
+                                    <span class="company-badge">ATUAL • SENIOR</span>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span data-i18n="exp_paytrack_date"><i class="fa-regular fa-calendar"></i> Outubro de 2025 — Presente (1 ano 1 mês)</span>
+                                    <span data-i18n="exp_paytrack_loc"><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG (Remoto/Híbrido)</span>
+                                </div>
+                            </div>
+                            <div class="timeline-role" data-i18n="exp_paytrack_role">Engenheiro de Qualidade Senior</div>
+
+                            <ul class="timeline-bullets">
+                                <li data-i18n="exp_paytrack_b1" data-i18n-html="true"><strong>Estratégia de QA em Travel:</strong> Atuação estratégica na garantia de qualidade das verticais de Aéreo, Hotéis, Rodoviário e Carros, unindo engenharia de testes com soluções de Inteligência Artificial para otimização de processos.</li>
+                                <li data-i18n="exp_paytrack_b2" data-i18n-html="true"><strong>Aprovação e Homologação Técnica:</strong> Liderança na aprovação técnica e homologação de novos integradores, estabelecendo critérios rigorosos de prontidão em funcionalidade e qualidade antes de produção.</li>
+                                <li data-i18n="exp_paytrack_b3" data-i18n-html="true"><strong>+100 Cenários E2E Automatizados:</strong> Desenvolvimento de mais de 100 cenários de testes automatizados com Playwright e Vitest, garantindo resiliência de fluxos críticos de negócio (pesquisa, reserva, emissão e cancelamento).</li>
+                                <li data-i18n="exp_paytrack_b4" data-i18n-html="true"><strong>Qualidade Multicamadas:</strong> Estruturação de estratégia multicamadas combinando testes manuais, análise estruturada de riscos, validação de APIs e escrita de cenários BDD em ambientes Local, Staging e UAT.</li>
+                            </ul>
+
+                            <div class="highlight-box">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <span data-i18n="exp_paytrack_highlight" data-i18n-html="true"><strong>Inovação com IA Generativa & RAG:</strong> Criei um sistema de chat LLM para equipes de suporte N1 e N2 com arquitetura RAG cruzando dados manuais com API proprietária de web scraping no Jira e Confluence. Automatizei a extração contínua de bugs resolvidos para retroalimentar a base de conhecimento da IA, gerando precisão e alta economia financeira.</span>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span>Playwright</span>
+                                <span>Vitest</span>
+                                <span>TypeScript</span>
+                                <span>LLM & RAG</span>
+                                <span>Web Scraping</span>
+                                <span>Jira & Confluence API</span>
+                                <span>BDD Gherkin</span>
+                                <span>Travel Verticals</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-card glass" data-project="apiflow">
-                        <div class="project-img-placeholder">
-                            <img src="apitesteflow/456168149-1108bcc0-35a7-438c-9d58-081b73e78ea0.png" alt="APIFlowTester">
-                        </div>
-                        <div class="project-info">
-                            <h3>APIFlowTester</h3>
-                            <p data-i18n="apiflow_desc">Ferramenta visual de drag-and-drop para testes de integração de API.</p>
-                            <div class="tags">
-                                <span>React 18</span>
-                                <span>Tailwind</span>
-                                <span>Lucide</span>
+                    <!-- 2. BANCO INTER -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div class="timeline-company-wrap">
+                                    <h3 class="timeline-company">Inter</h3>
+                                    <span class="company-badge">FINTECH</span>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span data-i18n="exp_inter_date"><i class="fa-regular fa-calendar"></i> Dezembro de 2023 — Outubro de 2025 (1 ano 11 meses)</span>
+                                    <span data-i18n="exp_inter_loc"><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</span>
+                                </div>
+                            </div>
+                            <div class="timeline-role" data-i18n="exp_inter_role">Analista de QA</div>
+
+                            <ul class="timeline-bullets">
+                                <li data-i18n="exp_inter_b1" data-i18n-html="true"><strong>Automação Otimizada Playwright:</strong> Desenvolvimento de automações de testes com Playwright em TypeScript, criando rotinas otimizadas para execução local rápida que aceleraram validações no dia a dia.</li>
+                                <li data-i18n="exp_inter_b2" data-i18n-html="true"><strong>Massa de Dados e Ambientes:</strong> Vivência sólida em ambientes UAT e Staging com manipulação de dados para construção de cenários de teste realistas e rastreáveis.</li>
+                                <li data-i18n="exp_inter_b3" data-i18n-html="true"><strong>Domínio de Crédito Consignado:</strong> Atuação em diferentes modalidades de crédito consignado (SIAPE, CLT/Privado e Leilão INSS), garantindo testes eficientes em WebView, aplicativos mobile (iOS e Android) e plataformas web.</li>
+                            </ul>
+
+                            <div class="highlight-box">
+                                <i class="fa-solid fa-user-shield"></i>
+                                <span data-i18n="exp_inter_highlight" data-i18n-html="true"><strong>Responsabilidade de Produto:</strong> Atuação proativa assumindo a responsabilidade da qualidade ponta a ponta, inclusive substituindo o Product Owner (PO) durante seus períodos de ausência.</span>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span>Playwright</span>
+                                <span>TypeScript</span>
+                                <span>Crédito Consignado</span>
+                                <span>Mobile (iOS & Android)</span>
+                                <span>WebView</span>
+                                <span>UAT & Staging</span>
+                                <span>Product Owner Substitute</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-card glass" data-project="caravana">
-                        <div class="project-img-placeholder">
-                            <img src="caravana%20da%20vera/home%20principal.png" alt="Caravana da Vera">
-                        </div>
-                        <div class="project-info">
-                            <h3>Caravana da Vera</h3>
-                            <p data-i18n="project2_desc">Sistema de reserva de viagens e galeria interativa.</p>
-                            <div class="tags">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>Redis</span>
+                    <!-- 3. 123MILHAS -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div class="timeline-company-wrap">
+                                    <h3 class="timeline-company">123milhas</h3>
+                                    <span class="company-badge">TRAVEL TECH</span>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span data-i18n="exp_123_date"><i class="fa-regular fa-calendar"></i> Agosto de 2022 — Novembro de 2023 (1 ano 4 meses)</span>
+                                    <span data-i18n="exp_123_loc"><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</span>
+                                </div>
+                            </div>
+                            <div class="timeline-role" data-i18n="exp_123_role">Engenheiro de Teste / QA</div>
+
+                            <ul class="timeline-bullets">
+                                <li data-i18n="exp_123_b1" data-i18n-html="true"><strong>Testes de APIs & Microsserviços:</strong> Aplicação de testes de acordo com a demanda de cada cenário, com forte foco em testes de APIs REST e integrações.</li>
+                                <li data-i18n="exp_123_b2" data-i18n-html="true"><strong>Esteiras CI/CD & Ambientes:</strong> Configuração e manutenção de ambientes de teste utilizando Git e pipelines Jenkins.</li>
+                                <li data-i18n="exp_123_b3" data-i18n-html="true"><strong>BDD & Bancos de Dados:</strong> Manipulação de banco de dados no ambiente de teste, criação de cenários de teste BDD com Gherkin e revisão técnica de testes escritos por outros QAs.</li>
+                            </ul>
+
+                            <div class="timeline-tags">
+                                <span>API Testing</span>
+                                <span>Jenkins CI/CD</span>
+                                <span>BDD Gherkin</span>
+                                <span>SQL & Databases</span>
+                                <span>Git</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-card glass" data-project="arenafacil">
-                        <div class="project-img-placeholder">
-                            <img src="arena%20facil/dash%20board.png" alt="Arena Fácil">
+                    <!-- 4. FOR PEOPLE SOFTWARES -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div class="timeline-company-wrap">
+                                    <h3 class="timeline-company">For People Softwares</h3>
+                                    <span class="company-badge">TECH LEAD • QA</span>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span data-i18n="exp_forpeople_date"><i class="fa-regular fa-calendar"></i> Abril de 2021 — Agosto de 2022 (1 ano 5 meses)</span>
+                                    <span data-i18n="exp_forpeople_loc"><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</span>
+                                </div>
+                            </div>
+                            <div class="timeline-role" data-i18n="exp_forpeople_role">Analista de Teste / QA & TechLead</div>
+
+                            <ul class="timeline-bullets">
+                                <li data-i18n="exp_forpeople_b1" data-i18n-html="true"><strong>Aplicações de Alta Escala:</strong> Garantia de qualidade em software Web e aplicativo Mobile atendendo a mais de 43 mil acessos simultâneos de clientes.</li>
+                                <li data-i18n="exp_forpeople_b2" data-i18n-html="true"><strong>Testes Multimodais:</strong> Execução de testes de stress, performance, caixa-preta, usabilidade e testes de integração em qualquer nova funcionalidade.</li>
+                                <li data-i18n="exp_forpeople_b3" data-i18n-html="true"><strong>Mapeamento de Causa-Raiz:</strong> Validação de todos os bugs reportados pelo setor técnico, busca da causa-raiz e mapeamento da solução para a equipe de desenvolvimento.</li>
+                            </ul>
+
+                            <div class="highlight-box">
+                                <i class="fa-solid fa-code-fork"></i>
+                                <span data-i18n="exp_forpeople_highlight" data-i18n-html="true"><strong>Atuação como TechLead:</strong> Liderança técnica (Julho de 2021 — Março de 2022) na análise e validação de erros e bugs críticos reportados por usuários no sistema.</span>
+                            </div>
+
+                            <div class="timeline-tags">
+                                <span>Tech Lead</span>
+                                <span>Stress & Performance</span>
+                                <span>Caixa-Preta</span>
+                                <span>Web & Mobile</span>
+                                <span>Mapeamento de Soluções</span>
+                            </div>
                         </div>
-                        <div class="project-info">
-                            <h3 data-i18n="arenafacil_title">Arena Fácil — SaaS</h3>
-                            <p data-i18n="arenafacil_desc">Reservas de quadras e controle de comandas em tempo real.</p>
-                            <div class="tags">
-                                <span>Real-time</span>
-                                <span>Dashboard</span>
-                                <span>BI</span>
+                    </div>
+
+                    <!-- 5. STEFANINI BRASIL -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div class="timeline-company-wrap">
+                                    <h3 class="timeline-company">Stefanini Brasil</h3>
+                                    <span class="company-badge">VALLOUREC</span>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span data-i18n="exp_stefanini_date"><i class="fa-regular fa-calendar"></i> Fevereiro de 2020 — Dezembro de 2020 (11 meses)</span>
+                                    <span data-i18n="exp_stefanini_loc"><i class="fa-solid fa-location-dot"></i> Brumadinho, MG</span>
+                                </div>
+                            </div>
+                            <div class="timeline-role" data-i18n="exp_stefanini_role">Analista de Sistemas (Vallourec)</div>
+
+                            <ul class="timeline-bullets">
+                                <li data-i18n="exp_stefanini_b1" data-i18n-html="true"><strong>Infraestrutura & Redes:</strong> Foco em infraestrutura de redes WAN/VPN, servidores e sistemas operacionais para grandes operações industriais.</li>
+                                <li data-i18n="exp_stefanini_b2" data-i18n-html="true"><strong>Segurança & Continuidade:</strong> Gestão de hardware, software, rotinas de backup, controle de acesso e conectividade segura garantindo a continuidade do negócio.</li>
+                            </ul>
+
+                            <div class="timeline-tags">
+                                <span>Infraestrutura</span>
+                                <span>Redes WAN/VPN</span>
+                                <span>Servidores</span>
+                                <span>Segurança da Informação</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. AEC -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <div class="timeline-header">
+                                <div class="timeline-company-wrap">
+                                    <h3 class="timeline-company">AeC</h3>
+                                    <span class="company-badge">LIDERANÇA</span>
+                                </div>
+                                <div class="timeline-meta">
+                                    <span data-i18n="exp_aec_date"><i class="fa-regular fa-calendar"></i> Maio de 2018 — Fevereiro de 2020 (1 ano 11 meses)</span>
+                                    <span data-i18n="exp_aec_loc"><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</span>
+                                </div>
+                            </div>
+                            <div class="timeline-role" data-i18n="exp_aec_role">Supervisor de Assistência Técnica & Suporte N1/N2</div>
+
+                            <ul class="timeline-bullets">
+                                <li data-i18n="exp_aec_b1" data-i18n-html="true"><strong>Supervisão Técnica:</strong> Liderança e supervisão de equipe técnica (Junho/2019 — Fevereiro/2020).</li>
+                                <li data-i18n="exp_aec_b2" data-i18n-html="true"><strong>Suporte Nível 2 (Terra):</strong> Diagnóstico técnico para soluções de hospedagem, domínios, zonas de DNS e serviços de e-mail corporativos e residenciais.</li>
+                            </ul>
+
+                            <div class="timeline-tags">
+                                <span>Liderança de Equipe</span>
+                                <span>Suporte N1 & N2</span>
+                                <span>Hospedagem & DNS</span>
+                                <span>Gestão de Incidentes</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- CASES & AUTOMATION SECTION -->
+            <section id="projects" class="section reveal">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="projects_title">Cases de Engenharia & Automação</h2>
+                    <p class="section-subtitle" data-i18n="projects_subtitle">Casos reais de arquitetura de testes, automação E2E de alta resiliência e soluções de Inteligência Artificial.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- CASE 1: PLAYWRIGHT TRAVEL SUITE -->
+                    <div class="project-card glass flagship" data-project="playwright_travel">
+                        <div class="project-img-placeholder">
+                            <img src="assets/cases/playwright_travel.jpg" alt="Travel Verticals — Suíte E2E Playwright">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="project_travel_title">Travel Verticals — Suíte E2E Playwright & Vitest</h3>
+                            <p data-i18n="project_travel_desc">Arquitetura de testes automatizados E2E cobrindo 4 verticais críticas (Aéreo, Hotéis, Rodoviário e Carros) com mais de 100 cenários de fluxos transacionais, mocks de parceiros e homologação contínua.</p>
+                            <div class="tags">
+                                <span>Playwright</span>
+                                <span>Vitest</span>
+                                <span>TypeScript</span>
+                                <span>CI/CD</span>
+                                <span>E2E Resiliente</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CASE 2: AI SUPPORT AGENT -->
+                    <div class="project-card glass flagship" data-project="rag_jira_ai">
+                        <div class="project-img-placeholder">
+                            <img src="assets/cases/rag_jira_ai.jpg" alt="AI Support Agent — RAG + Scraping Jira">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="project_rag_title">AI Support Agent — RAG + Scraping Jira & Confluence</h3>
+                            <p data-i18n="project_rag_desc">Sistema proprietário de IA Generativa que cruza chamados históricos de bugs resolvidos e bases de conhecimento para acelerar em tempo real o atendimento das equipes de suporte N1 e N2.</p>
+                            <div class="tags">
+                                <span>Python</span>
+                                <span>LLM & RAG</span>
+                                <span>Web Scraping</span>
+                                <span>Jira API</span>
+                                <span>Confluence API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CASE 3: BANKING QA SUITE -->
+                    <div class="project-card glass" data-project="banking_qa_suite">
+                        <div class="project-img-placeholder">
+                            <img src="assets/cases/banking_qa_suite.jpg" alt="Consignado Banking — Suíte Mobile & WebView">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="project_banking_title">Consignado Banking — Suíte Mobile & WebView</h3>
+                            <p data-i18n="project_banking_desc">Estratégia completa de testes em Crédito Consignado (SIAPE, CLT, Leilão INSS) abrangendo plataformas Web, WebView e apps nativos iOS/Android com provisionamento de dados realistas em UAT e Staging.</p>
+                            <div class="tags">
+                                <span>Mobile iOS/Android</span>
+                                <span>WebView</span>
+                                <span>UAT & Staging</span>
+                                <span>Crédito Consignado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CASE 4: APIFLOW TESTER -->
+                    <div class="project-card glass" data-project="apiflow">
+                        <div class="project-img-placeholder">
+                            <img src="apitesteflow/456168149-1108bcc0-35a7-438c-9d58-081b73e78ea0.png" alt="APIFlowTester">
+                        </div>
+                        <div class="project-info">
+                            <h3 data-i18n="project_apiflow_title">APIFlowTester — Ferramenta Visual de Testes</h3>
+                            <p data-i18n="project_apiflow_desc">Ferramenta open-source para modelagem visual drag-and-drop de fluxos de testes de integração e validação de requisições de APIs REST.</p>
+                            <div class="tags">
+                                <span>React 18</span>
+                                <span>API Testing</span>
+                                <span>Canvas Drag-and-Drop</span>
+                                <span>Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STACK & CERTIFICATIONS SECTION -->
             <section id="stack" class="section reveal">
-                <h2 class="section-title" data-i18n="stack_title">Tech Stack</h2>
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="stack_title">Tech Stack & Competências</h2>
+                    <p class="section-subtitle" data-i18n="stack_subtitle">Tecnologias, padrões de engenharia e certificações aplicadas na construção de sistemas confiáveis.</p>
+                </div>
                 
                 <div class="stack-container">
-                    <!-- Backend & Core -->
+                    <!-- Automação & Qualidade -->
                     <div class="stack-category">
-                        <h3 class="category-label">// BACKEND & CORE</h3>
+                        <h3 class="category-label" data-i18n="stack_cat_qa">// AUTOMAÇÃO & QUALIDADE DE SOFTWARE</h3>
                         <div class="stack-grid">
+                            <div class="stack-card glass" title="Playwright">
+                                <i class="fa-solid fa-vial-circle-check"></i>
+                                <span>Playwright</span>
+                            </div>
                             <div class="stack-card glass" title="TypeScript">
                                 <img src="tech%20stack/Typescript_logo_2020.svg.png" alt="TypeScript">
                                 <span>TypeScript</span>
                             </div>
-                            <div class="stack-card glass" title="Nest.js">
-                                <img src="tech%20stack/nest.js.jpg" alt="Nest.js">
-                                <span>Nest.js</span>
+                            <div class="stack-card glass" title="JavaScript">
+                                <i class="fa-brands fa-js"></i>
+                                <span>JavaScript</span>
                             </div>
-                            <div class="stack-card glass" title="Node.js">
-                                <img src="tech%20stack/Node.js_logo.svg.png" alt="Node.js">
-                                <span>Node.js</span>
+                            <div class="stack-card glass" title="Vitest">
+                                <i class="fa-solid fa-bolt-lightning"></i>
+                                <span>Vitest</span>
                             </div>
-                            <div class="stack-card glass" title="PHP">
-                                <img src="tech%20stack/php.png" alt="PHP">
-                                <span>PHP</span>
+                            <div class="stack-card glass" title="API Testing">
+                                <i class="fa-solid fa-network-wired"></i>
+                                <span>API Testing</span>
                             </div>
-                            <div class="stack-card glass" title="Laravel">
-                                <img src="tech%20stack/Laravel.svg.png" alt="Laravel">
-                                <span>Laravel</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Frontend & Mobile -->
-                    <div class="stack-category">
-                        <h3 class="category-label">// FRONTEND</h3>
-                        <div class="stack-grid">
-                            <div class="stack-card glass" title="React Native">
-                                <img src="tech%20stack/react%20native.png" alt="React Native">
-                                <span>React Native</span>
-                            </div>
-                            <div class="stack-card glass" title="Tailwind CSS">
-                                <img src="tech%20stack/Tailwind%20logoo.jpg" alt="Tailwind">
-                                <span>Tailwind</span>
-                            </div>
-                            <div class="stack-card glass" title="Framer Motion">
-                                <img src="tech%20stack/Framer%20Motion.png" alt="Framer Motion">
-                                <span>Framer</span>
+                            <div class="stack-card glass" title="BDD Gherkin">
+                                <i class="fa-solid fa-list-check"></i>
+                                <span>BDD Gherkin</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Database & Real-time -->
+                    <!-- Inteligência Artificial & Dados -->
                     <div class="stack-category">
-                        <h3 class="category-label">// DATABASE & REAL-TIME</h3>
+                        <h3 class="category-label" data-i18n="stack_cat_ai">// INTELIGÊNCIA ARTIFICIAL & DADOS</h3>
                         <div class="stack-grid">
+                            <div class="stack-card glass" title="LLM & Prompts">
+                                <i class="fa-solid fa-robot"></i>
+                                <span>LLM Agents</span>
+                            </div>
+                            <div class="stack-card glass" title="RAG Architecture">
+                                <i class="fa-solid fa-brain"></i>
+                                <span>RAG Systems</span>
+                            </div>
+                            <div class="stack-card glass" title="Web Scraping">
+                                <i class="fa-solid fa-spider"></i>
+                                <span>Web Scraping</span>
+                            </div>
                             <div class="stack-card glass" title="PostgreSQL">
                                 <img src="tech%20stack/postgresql.jpg" alt="PostgreSQL">
                                 <span>PostgreSQL</span>
@@ -212,51 +475,173 @@
                                 <img src="tech%20stack/redis.png" alt="Redis">
                                 <span>Redis</span>
                             </div>
-                            <div class="stack-card glass" title="Firebase">
-                                <img src="tech%20stack/firebase%20logo.png" alt="Firebase">
-                                <span>Firebase</span>
+                            <div class="stack-card glass" title="Data Pipelines">
+                                <i class="fa-solid fa-database"></i>
+                                <span>SQL & Data</span>
                             </div>
-                            <div class="stack-card glass" title="Supabase">
-                                <img src="tech%20stack/supabase%20logo.jpg" alt="Supabase">
-                                <span>Supabase</span>
+                        </div>
+                    </div>
+
+                    <!-- DevOps, Cloud & Ambientes -->
+                    <div class="stack-category">
+                        <h3 class="category-label" data-i18n="stack_cat_devops">// CI/CD, CLOUD & AMBIENTES</h3>
+                        <div class="stack-grid">
+                            <div class="stack-card glass" title="Jenkins">
+                                <i class="fa-brands fa-jenkins"></i>
+                                <span>Jenkins</span>
                             </div>
-                            <div class="stack-card glass" title="WebSockets">
-                                <img src="tech%20stack/WebSockets.png" alt="WebSockets">
-                                <span>WebSockets</span>
+                            <div class="stack-card glass" title="Git & GitHub">
+                                <i class="fa-brands fa-git-alt"></i>
+                                <span>Git & GitHub</span>
                             </div>
+                            <div class="stack-card glass" title="AWS Cloud">
+                                <i class="fa-brands fa-aws"></i>
+                                <span>AWS Cloud</span>
+                            </div>
+                            <div class="stack-card glass" title="Jira">
+                                <i class="fa-brands fa-jira"></i>
+                                <span>Jira</span>
+                            </div>
+                            <div class="stack-card glass" title="Confluence">
+                                <i class="fa-brands fa-confluence"></i>
+                                <span>Confluence</span>
+                            </div>
+                            <div class="stack-card glass" title="Staging & UAT">
+                                <i class="fa-solid fa-server"></i>
+                                <span>UAT / Staging</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Domínios & Plataformas -->
+                    <div class="stack-category">
+                        <h3 class="category-label" data-i18n="stack_cat_domain">// PLATAFORMAS & DOMÍNIOS DE NEGÓCIO</h3>
+                        <div class="stack-grid">
+                            <div class="stack-card glass" title="Web Apps">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>Web Apps</span>
+                            </div>
+                            <div class="stack-card glass" title="Mobile iOS & Android">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <span>Mobile Native</span>
+                            </div>
+                            <div class="stack-card glass" title="WebView">
+                                <i class="fa-solid fa-window-maximize"></i>
+                                <span>WebView</span>
+                            </div>
+                            <div class="stack-card glass" title="Crédito Consignado">
+                                <i class="fa-solid fa-money-check-dollar"></i>
+                                <span>Fintech & Loans</span>
+                            </div>
+                            <div class="stack-card glass" title="Travel Platforms">
+                                <i class="fa-solid fa-plane-departure"></i>
+                                <span>Travel Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formação Acadêmica & Certificações -->
+                <div class="cert-section">
+                    <h3 class="category-label" data-i18n="stack_cat_certs">// FORMAÇÃO ACADÊMICA & CERTIFICAÇÕES</h3>
+                    <div class="cert-grid">
+                        <div class="cert-card glass">
+                            <div class="cert-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h4 data-i18n="cert_promove_bs">Bacharel em Sistemas de Informação</h4>
+                            <p data-i18n="cert_promove_bs_desc">Faculdades Promove (2017 - 2020) • Tecnologia em Sistemas de Informação</p>
+                            <span class="cert-tag">Graduação</span>
+                        </div>
+
+                        <div class="cert-card glass">
+                            <div class="cert-card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                            <h4 data-i18n="cert_promove_net">Tecnologia em Sistemas de Redes</h4>
+                            <p data-i18n="cert_promove_net_desc">Faculdades Promove (2019 - 2020) • Infraestrutura, conectividade e segurança</p>
+                            <span class="cert-tag">Tecnólogo</span>
+                        </div>
+
+                        <div class="cert-card glass">
+                            <div class="cert-card-icon"><i class="fa-brands fa-aws"></i></div>
+                            <h4 data-i18n="cert_aws_cf">AWS Academy Cloud Foundations</h4>
+                            <p data-i18n="cert_aws_cf_desc">Amazon Web Services • Arquitetura de nuvem, computação distribuída e governança</p>
+                            <span class="cert-tag">AWS Certified</span>
+                        </div>
+
+                        <div class="cert-card glass">
+                            <div class="cert-card-icon"><i class="fa-brands fa-aws"></i></div>
+                            <h4 data-i18n="cert_aws_cc">Amazon AWS Cloud Computing</h4>
+                            <p data-i18n="cert_aws_cc_desc">Amazon Web Services • Serviços em nuvem, resiliência e escalabilidade</p>
+                            <span class="cert-tag">AWS Cloud</span>
+                        </div>
+
+                        <div class="cert-card glass">
+                            <div class="cert-card-icon"><i class="fa-solid fa-database"></i></div>
+                            <h4 data-i18n="cert_db">Database Foundations</h4>
+                            <p data-i18n="cert_db_desc">Modelagem relacional, manipulação SQL e integridade de dados</p>
+                            <span class="cert-tag">Database</span>
+                        </div>
+
+                        <div class="cert-card glass">
+                            <div class="cert-card-icon"><i class="fa-brands fa-java"></i></div>
+                            <h4 data-i18n="cert_java">Java Foundations</h4>
+                            <p data-i18n="cert_java_desc">Orientação a objetos, algoritmos e fundamentos da plataforma Java</p>
+                            <span class="cert-tag">Java Core</span>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- CONTACT SECTION -->
             <section id="contact" class="section reveal">
                 <div class="contact-container">
                     <div class="contact-header">
-                        <span class="status-badge"><span class="dot"></span> Available for projects</span>
-                        <h2 class="big-cta">Ready to build the <br><span>Extraordinary?</span></h2>
+                        <span class="hero-badge"><span class="pulse-dot"></span> <span data-i18n="contact_badge">Disponível para Oportunidades CLT / PJ</span></span>
+                        <h2 class="big-cta"><span data-i18n="contact_title_1">Pronto para Construir um Produto</span> <br><span data-i18n="contact_title_2">com Qualidade & Resiliência Extrema?</span></h2>
+                        <p class="section-subtitle" data-i18n="contact_subtitle" style="margin-bottom: 3.5rem;">Aberto a conversas para posições de Engenheiro de Qualidade Sênior, SDET e QA Lead.</p>
                     </div>
                     
                     <div class="contact-grid">
+                        <!-- LINKEDIN -->
                         <div class="contact-card glass">
-                            <div class="card-icon"><i class="fab fa-fiverr"></i></div>
-                            <h3>Fiverr</h3>
-                            <p>Hire me for custom projects</p>
-                            <a href="https://www.fiverr.com/arthurperdigao" target="_blank" class="contact-link">Order a Gig →</a>
+                            <div class="card-icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <h3 data-i18n="contact_linkedin_title">LinkedIn</h3>
+                            <p data-i18n="contact_linkedin_desc">Conectar e conversar profissionalmente</p>
+                            <a href="https://www.linkedin.com/in/arthur-perdig%C3%A3o-596b98185/" target="_blank" class="contact-link" data-i18n="contact_linkedin_cta">Acessar Perfil →</a>
                         </div>
                         
+                        <!-- GITHUB -->
                         <div class="contact-card glass">
-                            <div class="card-icon"><i class="fab fa-linkedin"></i></div>
-                            <h3>LinkedIn</h3>
-                            <p>Connect professionally</p>
-                            <a href="https://www.linkedin.com/in/arthur-perdig%C3%A3o-596b98185/" target="_blank" class="contact-link">View profile →</a>
+                            <div class="card-icon"><i class="fa-brands fa-github"></i></div>
+                            <h3 data-i18n="contact_github_title">GitHub</h3>
+                            <p data-i18n="contact_github_desc">Explorar códigos, frameworks e testes</p>
+                            <a href="https://github.com/arthurperdigao" target="_blank" class="contact-link" data-i18n="contact_github_cta">Ver Repositórios →</a>
                         </div>
                         
+                        <!-- EMAIL -->
                         <div class="contact-card glass">
-                            <div class="card-icon"><i class="fab fa-github"></i></div>
-                            <h3>GitHub</h3>
-                            <p>Check my repositories</p>
-                            <a href="https://github.com/arthurperdigao" target="_blank" class="contact-link">Explore code →</a>
+                            <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <h3 data-i18n="contact_email_title">E-mail Direto</h3>
+                            <p data-i18n="contact_email_desc">arthuradm2016@gmail.com</p>
+                            <button class="contact-link copy-email-btn" data-email="arthuradm2016@gmail.com" data-i18n="contact_email_cta">Copiar / Enviar E-mail →</button>
                         </div>
+
+                        <!-- WHATSAPP / TELEFONE -->
+                        <div class="contact-card glass">
+                            <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                            <h3 data-i18n="contact_whatsapp_title">WhatsApp / Telefone</h3>
+                            <p data-i18n="contact_whatsapp_desc">+55 (31) 98633-1106</p>
+                            <a href="https://wa.me/5531986331106?text=Olá%20Arthur,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20uma%20oportunidade%20de%20QA/SDET!" target="_blank" class="contact-link" data-i18n="contact_whatsapp_cta">Iniciar Conversa →</a>
+                        </div>
+                    </div>
+
+                    <!-- CV DOWNLOAD BANNER -->
+                    <div class="cv-cta-banner glass">
+                        <div class="cv-cta-info">
+                            <h3 data-i18n="cv_banner_title">Acesse o Currículo Completo em PDF</h3>
+                            <p data-i18n="cv_banner_desc">Baixe o documento detalhado com todo o histórico corporativo, projetos, competências e certificações.</p>
+                        </div>
+                        <a href="Arthur_Perdigao_CV.pdf" download="Arthur_Perdigao_CV.pdf" class="primary-btn magnetic" target="_blank">
+                            <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="cv_banner_btn">Baixar Currículo (PDF)</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -266,13 +651,14 @@
             <div class="footer-content">
                 <div class="footer-left">
                     <div class="logo">AP. <img src="iconeBrasil.jpg" alt="Brasil" class="flag-img"></div>
-                    <p data-i18n="footer_rights">© 2026 Arthur Perdigão. All rights reserved.</p>
+                    <p data-i18n="footer_rights">© 2026 Arthur Perdigão • SDET & QA Architect. Todos os direitos reservados.</p>
                 </div>
                 <div class="footer-right">
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/arthur-perdig%C3%A3o-596b98185/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/arthurperdigao" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:arthuradm2016@gmail.com" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://wa.me/5531986331106" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -292,13 +678,16 @@
                     <div class="modal-info">
                         <h2 id="modal-title"></h2>
                         <p id="modal-desc"></p>
-                        <a id="modal-link" href="#" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; display: inline-block;">
-                            <span data-i18n="cta_visit">Visitar Projeto</span>
+                        <a id="modal-link" href="#" target="_blank" class="primary-btn magnetic" style="margin-top: 1.5rem; display: inline-flex;">
+                            <span data-i18n="cta_visit">Acessar Repositório / Detalhes</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Copy feedback toast -->
+        <div id="copy-toast" class="copy-toast">E-mail copiado!</div>
 
         <!-- Technical HUD -->
         <div id="tech-hud" class="glass">
